@@ -1,0 +1,28 @@
+# This is a Linux Mint theme for gitprompt.sh made my mafn,
+# it uses the default Single_line_openSUSE bash prompt style since it most closely resembled
+# what I was going for an was the easiest to modify to my likings
+
+override_git_prompt_colors() {
+  GIT_PROMPT_THEME_NAME="Single_line_Mint"
+
+  GIT_PROMPT_PREFIX="${BrightBlue}[${ResetColor}"
+  GIT_PROMPT_SEPARATOR="${BrightBlue}|${ResetColor}"
+  GIT_PROMPT_SUFFIX="${BrightBlue}]${ResetColor}"              
+
+  GIT_PROMPT_BRANCH="${BrightGreen}"
+  GIT_PROMPT_UNTRACKED=" ${Cyan}…${ResetColor}"
+  GIT_PROMPT_CHANGED="${Yellow}✚ "
+  GIT_PROMPT_STAGED="${Magenta}●"
+
+  GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_${BrightGreen}\u@\h ${BrightBlue}\w${ResetColor}"
+  GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_${BoldRed}\u@\h ${BrightBlue}\w${ResetColor}"
+
+  #Intentionally left blank
+  GIT_PROMPT_COMMAND_OK="${ResetColor}"
+  GIT_PROMPT_COMMAND_FAIL="${ResetColor}"
+
+  GIT_PROMPT_END_USER="${BrightBlue} \$ ${ResetColor}"
+  GIT_PROMPT_END_ROOT=" # ${ResetColor}"
+}
+
+reload_git_prompt_colors "Single_line_openSUSE"
